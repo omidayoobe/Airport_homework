@@ -1,35 +1,31 @@
 
 
 ##### Aircrafts class
-class Aircrafts():
+class Aircraft():
     # aircroft name
-    def __init__(self,aircraft_name):
+    def __init__(self,aircraft_name, company, colour ):
         self.aircraft_name = aircraft_name
+        self.company = company
+        self.colour = colour
 
 
 ##### planes sub-class
-class Planes(Aircrafts):
+class Plane(Aircraft):
     # plane company
     # plane colour
     # plane number
-    def __init__(self, aircraft_name, company, colour, number):
-        self.company = company
-        self.colour = colour
-        self. number = number
-        super().__init__(aircraft_name)
+    def __init__(self, aircraft_name, company, colour ):
+        super().__init__(aircraft_name,company, colour)
 
-    # ticket number
-    def tickets(self, ticketsNO):
-        self.ticketsNO = ticketsNO
+
 
 
 ##### helicopter sub-class
-class Helicopter(Aircrafts):
+class Helicopter(Aircraft):
     # helicopter company
     # helicopter colour
     # helicopter number
-    def __init__(self,aircraft_name, company,colour, number):
-        self.company = company
-        self.colour = colour
-        self.number = number
-        super().__init__(aircraft_name)
+    def __init__(self,aircraft_name, company,colour):
+        super().__init__(aircraft_name, company, colour)
+
+
